@@ -71,7 +71,7 @@ CoolTexture.image.iChannel[0] = CoolTexture.bufferB;
 
 There's some Shadertoy features it currently doesn't support:
 
-- Mouse stuff.
+- Mouse stuff. (mouse is always set to screen center)
 - Soundcloud stuff.
 - Built-in-textures.
   If a Shadertoy uses one of the built-in textures for an iChannel, you
