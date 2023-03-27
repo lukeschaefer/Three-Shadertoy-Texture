@@ -91,4 +91,5 @@ There's some Shadertoy features it currently doesn't support:
   If a Shadertoy uses one of the built-in textures for an iChannel, you
   have to download that texture yourself.
 - Probably other stuff.
+- I'm using this in my WIP [LunarLander](https://lander.luke.software) project for the smoke.
 
