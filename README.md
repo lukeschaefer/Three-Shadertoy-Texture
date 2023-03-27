@@ -71,6 +71,16 @@ CoolTexture.image.shader = image;
 CoolTexture.image.iChannel[0] = CoolTexture.bufferB;
 ```
 
+You can also add your own uniforms like so:
+
+```typescript
+// Global uniform:
+CoolTexture.uniforms.uFluidSpeed = {value: 2.5};
+
+// Per-buffer uniform:
+CoolTexture.image.uniforms.uBirdColor = {value: new THREE.Color('blue')};
+```
+
 ## FYI
 
 There's some Shadertoy features it currently doesn't support:
