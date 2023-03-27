@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 
-import { ShadertoyTexture } from "../../../src/ShadertoyTexture";
+import { ShadertoyTexture } from "../ShadertoyTexture";
 import common from './common.frag';
 import image from './image.frag';
 import bufferA from './bufferA.frag';

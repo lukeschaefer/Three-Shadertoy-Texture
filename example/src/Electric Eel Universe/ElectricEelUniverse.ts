@@ -1,5 +1,5 @@
 import { ExampleShader } from "..";
-import { ShadertoyTexture } from "../../../src/ShadertoyTexture";
+import { ShadertoyTexture } from "../ShadertoyTexture";
 import image from './image.frag';
 
 // This is a relatively simple ShaderToy that only requires an "image" shader.

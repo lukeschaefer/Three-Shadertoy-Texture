@@ -6,8 +6,8 @@ import * as dat from 'lil-gui'
 
 import { OrbExample } from './Orb Tunneler/OrbTunneler';
 import { EelExample } from './Electric Eel Universe/ElectricEelUniverse';
-import { OceanExample, OceanTexture } from './Ocean/Ocean';
-import { ShadertoyTexture } from '../../src/ShadertoyTexture';
+import { OceanExample } from './Ocean/Ocean';
+import { ShadertoyTexture } from "./ShadertoyTexture";
 
 /**
  * Sizes
