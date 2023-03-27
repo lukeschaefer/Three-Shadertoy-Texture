@@ -1,0 +1,32 @@
+{
+  "name": "three-shadertoy-texture",
+  "version": "1.0.0",
+  "description": "Utility for using a Shadertoy material as a texture.",
+  "main": "dist/ShadertoyTexture.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukeschaefer/Three-Shadertoy-Texture.git"
+  },  
+  "files": [
+    "dist/ShadertoyTexture.js",
+    "dist/types/ShadertoyTexture.d.ts"
+  ],  
+  "types": "dist/types/ShadertoyTexture.d.ts",
+  "keywords": [
+    "threejs",
+    "shadertoy",
+    "texture"
+  ],
+  "author": "Luke Schaefer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lukeschaefer/Three-Shadertoy-Texture/issues"
+  },
+  "homepage": "https://github.com/lukeschaefer/Three-Shadertoy-Texture#readme",
+  "devDependencies": {
+    "@types/three": "^0.149.0",
+    "three": "^0.150.0",
+    "typescript": "^4.9.5"
+  }
+}

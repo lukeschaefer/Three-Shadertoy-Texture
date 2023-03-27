@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadertoy Texture Example</title>
+    <style>
+      body, html {
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+      #overlay {
+        position: fixed;
+        top: 0;
+        margin: auto;
+        width: 100%;
+        font-family: sans-serif;
+        text-align: center;
+        color: white;
+        text-shadow: 0 2px 2px black, 0 2px 6px black, 0 0 32px black;
+        opacity: .8;
+      }
+
+      pre {
+        margin-top: -22px;
+        padding: 0;
+      }
+
+      a {
+        color: cornflowerblue !important;
+      }
+
+      pre#credit {
+        position: fixed;
+        bottom: 32px;
+        width: 100%;
+        text-align: center;
+      }
+
+      h2 {
+        margin-bottom: 0;
+      }
+
+      span {
+        display: block;
+      }
+    </style>
+</head>
+<body>
+    <canvas class="webgl"></canvas>
+    <div id="overlay">
+      <h1>Shadertoy Texture Example</h1>
+      <pre>Click the buttons right to change the material. (see <a href="https://github.com/lukeschaefer/Three-Shadertoy-Texture">here</a> for more info.)</pre>
+      <pre id="credit">
+        <h2>Shader Credit:</h2>
+        <span id="credit-text"></span>
+      </pre>
+    </div>
+    <script type="module" src="./index.ts"></script>
+</body>
+</html>

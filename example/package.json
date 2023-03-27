@@ -1,0 +1,20 @@
+{
+  "name": "three-shadertoy-texture-example",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "deploy": "vercel --prod"
+  },
+  "devDependencies": {
+    "vercel": "^28.10.1",
+    "vite": "^4.0.4"
+  },
+  "dependencies": {
+    "lil-gui": "^0.17.0",
+    "three": "^0.148.0",
+    "vite-plugin-glsl": "^1.1.2"
+  }
+}
