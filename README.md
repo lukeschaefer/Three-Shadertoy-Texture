@@ -26,23 +26,10 @@ First, install with `npm i three-shadertoy-texture`.
 Then use it like so:
 
 ``` typescript
+import { ShadertoyTexture } from "three-shadertoy-texture";
+
 export const CoolTexture = new ShadertoyTexture(512, 512);
-
-CoolTexture.common = `...copy-and-pasted code from the 'Common' section...`;
-
-CoolTexture.bufferA.shader = `...code from 'BufferA' section...`;
-
-// Load the input that iChannel0 in BufferA uses:
-const loader = new THREE.TextureLoader();
-CoolTexture.bufferA.iChannel[0] = loader.load("/Orb%20Tunneler/iChannel0.jpg");
-
-// BufferB iChannel0 uses the output of BufferA
-CoolTexture.bufferB.shader = bufferB;
-CoolTexture.bufferB.iChannel[0] = CoolTexture.bufferA;
-
-// Shader content from the "Image" tab:
-CoolTexture.image.shader = image;
-CoolTexture.image.iChannel[0] = CoolTexture.bufferB;
+CoolTexture.image.shader = `...copy-and-pasted code from the 'Image' section...`;
 
 // Some mesh you have:
 cube.material.map = CoolShader.texture;
@@ -55,6 +42,30 @@ cube.onBeforeRender = (renderer) => {
 
 And you're good to go! If you're confused, take a look at the code
 in the [example directory](https://github.com/lukeschaefer/Three-Shadertoy-Texture/tree/main/example/src).
+
+### Advanced
+
+As mentioned earlier, Shadertoy supports Buffers, allowing creators to make really cool stuff.
+This tool supports buffers using the same copy-paste techniques, except you just have to
+pay attention to the inputs for each Buffer - which may be other Buffers, or some Texture.
+Here's how that looks:
+
+```typescript
+// Load the input that iChannel0 in BufferA uses:
+CoolTexture.bufferA.shader  = `Code from the BufferA section...`
+
+// BufferA's iChannel0 is some sort of image:
+const loader = new THREE.TextureLoader();
+CoolTexture.bufferA.iChannel[0] = loader.load("iChannel0.jpg");
+
+// BufferB iChannel0 uses the output of BufferA
+CoolTexture.bufferB.shader = `BufferB Content Here`;
+CoolTexture.bufferB.iChannel[0] = CoolTexture.bufferA;
+
+// And the 'Image' tab uses BufferB as it's input:
+CoolTexture.image.shader = image;
+CoolTexture.image.iChannel[0] = CoolTexture.bufferB;
+```
 
 ## FYI
 
