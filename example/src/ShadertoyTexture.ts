@@ -81,7 +81,7 @@ export class ShadertoyTexture {
     this.uniforms.iFrame.value++;
 
     const renderOrder = [this.bufferA, this.bufferB, this.bufferC, this.bufferD, this.image];
-    renderOrder.forEach((buffer) => {
+    renderOrder.forEach((buffer : BufferShader) => {
       if (buffer.enabled) {
         // Update buffer uniforms with global uniforms:
         Object.keys(this.uniforms).forEach((key) => {
@@ -99,8 +99,9 @@ interface IChannelConfig {
 }
 
 function isTexture(input : THREE.Texture | BufferShader) : input is THREE.Texture {
-  return input['isTexture'];
+  return input instanceof THREE.Texture;
 }
+
 const emptyTexture = new THREE.Texture();
 
 export class BufferShader {

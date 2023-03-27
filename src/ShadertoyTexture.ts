@@ -95,7 +95,7 @@ interface IChannelConfig {
 }
 
 function isTexture(input : THREE.Texture | BufferShader) : input is THREE.Texture {
-  return input['isTexture'];
+  return input instanceof THREE.Texture;
 }
 const emptyTexture = new THREE.Texture();
 
