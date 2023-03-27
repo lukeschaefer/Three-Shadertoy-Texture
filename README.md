@@ -2,6 +2,8 @@
 
 Small utility for easily using a [Shadertoy](https://www.shadertoy.com/) as a texture in a [Three.js](https://threejs.org/) project.
 
+Here's a quick [example](https://three-shadertoy-texture-example.vercel.app/).
+
 ## About
 
 Shadertoy is a neat website where users can create and share shaders. However, there's a few obstacles to
@@ -52,7 +54,7 @@ cube.onBeforeRender = (renderer) => {
 ```
 
 And you're good to go! If you're confused, take a look at the code
-in the example directory.
+in the [example directory](https://github.com/lukeschaefer/Three-Shadertoy-Texture/tree/main/example/src).
 
 ## FYI
 
