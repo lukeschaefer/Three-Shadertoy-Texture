@@ -2,6 +2,8 @@
 
 Small utility for easily using a [Shadertoy](https://www.shadertoy.com/) as a texture in a [Three.js](https://threejs.org/) project.
 
+```npm i three-shadertoy-texture```
+
 Here's a quick [example](https://three-shadertoy-texture-example.vercel.app/).
 
 ## About
